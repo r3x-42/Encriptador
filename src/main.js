@@ -92,5 +92,6 @@ function desencriptarBtn(){
 
 // Funcion copiar  
 function copiar(){
-    
+    navigator.clipboard.writeText(mensajeFinal.textContent);
+
 }
