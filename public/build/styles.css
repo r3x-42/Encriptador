@@ -779,9 +779,18 @@ video {
     padding-top: 5rem;
     padding-bottom: 5rem;
   }
+
+  .md\:py-0 {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
 }
 
 @media (min-width: 1024px) {
+  .lg\:m-auto {
+    margin: auto;
+  }
+
   .lg\:w-full {
     width: 100%;
   }
@@ -792,5 +801,10 @@ video {
 
   .lg\:justify-around {
     justify-content: space-around;
+  }
+
+  .lg\:py-20 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 }
