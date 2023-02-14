@@ -543,6 +543,16 @@ video {
   margin-bottom: 4rem;
 }
 
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.mx-48 {
+  margin-left: 12rem;
+  margin-right: 12rem;
+}
+
 .block {
   display: block;
 }
@@ -569,6 +579,10 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-\[40px\] {
+  width: 40px;
 }
 
 .flex-col {
@@ -763,6 +777,14 @@ video {
 }
 
 @media (min-width: 768px) {
+  .md\:fixed {
+    position: fixed;
+  }
+
+  .md\:z-20 {
+    z-index: 20;
+  }
+
   .md\:flex-row {
     flex-direction: row;
   }
@@ -779,16 +801,11 @@ video {
     padding-top: 5rem;
     padding-bottom: 5rem;
   }
-
-  .md\:py-0 {
-    padding-top: 0px;
-    padding-bottom: 0px;
-  }
 }
 
 @media (min-width: 1024px) {
-  .lg\:m-auto {
-    margin: auto;
+  .lg\:fixed {
+    position: fixed;
   }
 
   .lg\:w-full {
@@ -801,10 +818,5 @@ video {
 
   .lg\:justify-around {
     justify-content: space-around;
-  }
-
-  .lg\:py-20 {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
   }
 }
