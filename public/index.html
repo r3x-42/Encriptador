@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="build/styles.css">
+</head>
+<body>
+    <nav class="lg:w-full text-black border-b border-b-gray-200 shadow-md py-4 ">
+        <div class="flex flex-col items-center md:flex-row lg:justify-around lg:items-center md:justify-around md:items-center ">
+            <img class="w-[50px]" src="/src/assets/logo2.png" alt="logo" />
+            <h1 class="font-bold text-xl">Encriptador Cybernetico</h1>
+        </div>
+    </nav>
+    <main class="flex flex-col md:flex-row md:justify-around md:items-center md:py-20">
+        <section class="flex flex-col justify-center items-center m-auto py-8">
+               
+            <textarea id="mensaje" rows={6} class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Ingresa tu texto aqui..."></textarea>
+
+             <div class="p-4">
+                <p>⚠️  Solo letras minusculas y sin acentos</p>
+            </div>
+            <div>
+            <button id="botonEncriptador" type="submit" class="py-2 px-4 bg-blue-500 text-white rounded-md font-bold my-16 mx-8">
+                Encriptador
+            </button>
+            <button id="botonDesencriptador" type="submit" class="py-2 px-4 bg-blue-500 text-white rounded-md font-bold my-16 mx-8">
+                Desencriptar
+            </button>
+        </div>
+        </section>
+
+        <article class=" flex flex-col items-center justify-center m-auto h-96 w-96">
+            <div>
+                <img class="w-[300px]" src="/src/assets/penamiento.png" alt="pensamientoProfundo" />
+            </div>
+            
+            <div id="mensajeFinal">
+                
+            </div>
+
+            <button id="btnCopiar" type="submit" class="py-2 px-4 bg-blue-500 text-white rounded-md font-bold my-16 mx-8">
+                Copiar Texto
+            </button>
+        </article>
+        
+    </main>
+
+    <footer class="fixed bottom-0 left-0 z-20 w-full p-4 bg-white border-t border-gray-200 shadow flex items-center justify-between dark:bg-gray-800 dark:border-gray-600">
+        <a href="https://www.linkedin.com/in/andres-vargas-castillo/" target="blank"><img class="w-[50px]"  src="/src/assets/linkedin.png" alt="Mi linkedin" /></a>
+        <p class="font-bold">Andru Vargas 🦖</p>
+        <a href="https://github.com/r3x-42" target="blank"><img class="w-[50px]"  src="/src/assets/github.png" alt="Mi github" /></a>
+    </footer>
+    <script src="/src/main.js"></script>
+</body>
+</html>
