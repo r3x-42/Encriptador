@@ -1,6 +1,4 @@
 //Variables
-let mensaje = document.querySelector('#mensaje');
-let mensajeFinal = document.querySelector('#mensajeFinal');
 let btnCopiar = document.querySelector('#btnCopiar');
 let botonEncriptador = document.querySelector("#botonEncriptador");
 let botonDesencriptador = document.querySelector("#botonDesencriptador");
@@ -15,7 +13,7 @@ let botonDesencriptador = document.querySelector("#botonDesencriptador");
 // Listeners 
 
 // ListenerButonEncriptador
-botonEncriptador.addEventListener('click', encriptarBtn) // CallBack
+botonEncriptador.addEventListener('click', encriptar) // CallBack
 
 // ListenerButonDesencriptador
 botonDesencriptador.addEventListener('click', desencriptarBtn) // CallBack
@@ -45,31 +43,24 @@ function esValido(mensaje){
     }
 
 // Funcion Encriptar
- function encriptar(textoEncriptado) {
-    let matriz =[["e","enter"],["i","imes"],["a","ai"],["o","ober"],["u","ufat"]];
-    textoEncriptado = textoEncriptado.toLowerCase();
+ function encriptar() {
+    let mensaje = document.querySelector('#mensaje').value;
+    let textoCifrado = mensaje
+    .replace(/e/gi, "enter")
+    .replace(/i/gi, "imes")
+    .replace(/a/gi, "ai")
+    .replace(/o/gi, "ober")
+    .replace(/u/gi, "ufat");
 
-    for (let i = 0; i < matriz.length; i++){
-
-        if(textoEncriptado.includes(matriz[i][0])){
-
-            textoEncriptado = textoEncriptado.replaceAll(matriz[i][0],
-                matriz[i][1]);
-        }
-        return textoEncriptado
-    }
+    let mensajeFinal = document.querySelector('#mensajeFinal');
+    mensajeFinal.innerHTML = textoCifrado
 }
-
-// Funcion encriptarBtn
-function encriptarBtn(){
-    const mensajeEncriptado = encriptar(mensaje.value)
-    mensajeFinal.innerHTML = mensajeEncriptado
-    mensaje.value = ""
-} 
+ 
 
 // Funcion DesencriptarTexto
 function desencriptar(textoDesencriptado){
     let matriz = [["enter","e"], ["imes","i"], ["ai","a"], ["ober","o"], ["ufat","u"]];
+
     textoDesencriptado = textoDesencriptado.toLowerCase();
 
     for(let i = 0; i < matriz.length; i++){
@@ -93,5 +84,4 @@ function desencriptarBtn(){
 // Funcion copiar  
 function copiar(){
     navigator.clipboard.writeText(mensajeFinal.textContent);
-
 }
